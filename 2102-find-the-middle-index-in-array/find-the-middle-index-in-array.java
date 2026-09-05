@@ -8,8 +8,7 @@ class Solution {
        int left = 0;
        int right = 0;
        for(int i=0;i<n;i++){
-        right = total-left-arr[i];
-        if(left == right){
+        if(left == total-left-arr[i]){
             return i;
         }
         else{
