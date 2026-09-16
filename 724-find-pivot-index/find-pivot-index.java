@@ -1,7 +1,11 @@
 class Solution {
     public int pivotIndex(int[] nums) {
         int n = nums.length;
-        int total = Arrays.stream(nums).sum();
+        // int total = Arrays.stream(nums).sum();
+        int total=0;
+        for(int i=0;i<n;i++){
+            total += nums[i];
+        }
         int leftsum = 0;
         for(int i=0;i<n;i++){
             if(leftsum == total-leftsum-nums[i]){
