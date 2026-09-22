@@ -5,14 +5,14 @@ class Solution {
         ArrayDeque<Integer> q = new ArrayDeque<>();
 
         for (int i = 0; i < tickets.length; i++) {
-            q.add(i);
+            q.addLast(i);
         }
         int turns = 0;
         while (tickets[k] > 0) {
-            int front = q.remove();
+            int front = q.removeFirst();
             tickets[front]--;
             if (tickets[front] > 0) {
-                q.add(front);
+                q.addLast(front);
             }
             turns++;
         }
